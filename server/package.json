@@ -1,0 +1,7 @@
+{
+  "name": "meantest",
+  "description": "test mean stack build",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
