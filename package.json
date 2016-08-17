@@ -1,0 +1,11 @@
+{
+  "name": "angularjs_v2_test",
+  "version": "0.0.1",
+  "dependencies": {
+    "errorhandler": "^1.4.3",
+    "express": "~4.13.4",
+    "express-ipfilter": "0.0.25",
+    "mysql": "^2.11.1",
+    "open": "0.0.5"
+  }
+}
