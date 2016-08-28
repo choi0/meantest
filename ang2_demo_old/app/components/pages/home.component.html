@@ -1,0 +1,69 @@
+<!-- app.component has container class iin template -->
+
+<div class="row">
+  <h3 class="text-center">Some Simple examples of Angular 2 features</h3>
+  <p>1. <strong>Structural Directives:</strong> The following example uses the *ngFor structural directive to traverse an array of objects
+  and inject a property of that object into the DOM with interpolation (Double curly brackets). Finally, the
+  *ngIf structural directive is used to check if the object has a length and inject that length into the DOM.
+  </p>
+</div>
+
+<div class="row">
+  <ul>
+    <li *ngFor="#vehicle of vehicles">
+      {{vehicle.name}}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="vehicles.length" class="row">
+  <p>You have {{vehicles.length}} vehicles</p>
+</div>
+
+<div class="row">
+  <p>2. <strong>Two-Way Binding:</strong> The following example uses the [(ngModel)] structural directive to bind the view to the model.
+    The user's input updates the data in the component file. The FormsModule must be imported in the app.module file for the ngModel directive
+    to work.
+  </p>
+</div>
+
+<div class="row">
+  <div class="form-group">
+    <label for="exampleInput">Modify the text in the input form</label>
+    <input [(ngModel)]="example.name" type="text" class="form-control" id="exampleInput">
+  </div>
+
+  <p><strong>Updated text:</strong> <span style="color: red">{{example.name}}</span></p>
+</div>
+
+<div class="row">
+  <p>3. <strong>Binding Events:</strong> The following example uses the updated event binding directives
+    to execute a component function when a specified event occurs.
+  </p>
+</div>
+
+<div class="row text-center">
+  <p (mouseover)="log('mouseover')"
+     (mousedown)="log('mousedown')"
+     (mouseleave)="log('mouseleave')"
+     (mouseup)="log('mouseup')"
+     (click)="log('click')"
+     ><strong>Mouse over or click me!</strong>
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-2"></div>
+
+  <div class="col-md-8">
+    <ul class="messages" style="height: 300px; border: #999 1px dotted; width: 100%; overflow-y: scroll;">
+      <li *ngFor="#msg of messages" style="list-style:none;" class="text-center">{{msg}}</li>
+    </ul>
+  </div>
+
+  <div class="col-md-2"></div>
+</div>
+
+<div class="row text-center">
+  <button type="button" class="btn btn-danger" (click)="clearList()">Clear List</button>
+</div>
